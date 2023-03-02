@@ -1,3 +1,5 @@
+@import url(../css/variable.css);
+
 *{
     margin: 0;
     padding: 0;
@@ -7,18 +9,54 @@
 
 body{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-
 }
+header,
+footer{
+    padding: .625rem;
+}
+
+/* 
+++++++++++++++
+header
+++++++++++++++
+*/
 
 header{
-    background-color: aqua;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+header img{
+    width: 2.5rem;
 }
 
+header h1{
+   text-align: left;
+}
+
+button{
+    padding: .3125rem 1.875rem;
+    border-radius: .625rem;
+}
+#sez-logo,
+#mod-gioco{
+    width: 50%;
+    margin: 0 .9375rem;
+}
+#sez-logo{
+    display: flex;
+    gap: .625rem;
+}
+#mod-gioco{
+    text-align: right;
+}
+/* 
+++++++++++++++
+main
+++++++++++++++
+*/
 main{
-    background-color: orange;
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,25 +65,28 @@ main{
 }
 
 .container{
-    background-color: chartreuse;
     height: 31.25rem;
     width: 31.25rem;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
 }
-
-footer{
-    background-color: aqua;
-}
-
-header,
-footer{
-    padding: .625rem;
-}
-
 .casella{
     width: calc(100% / 10);
     height: calc(100% / 10);;
     border: 1px solid black;
+}
+/* 
+++++++++++++++
+footer
+++++++++++++++
+*/
+
+footer i{
+    font-size:  .625rem;
+    vertical-align: middle;
+}
+
+.made{
+    margin: 0 .9375rem;
 }
