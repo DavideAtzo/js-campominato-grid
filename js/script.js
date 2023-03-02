@@ -14,7 +14,6 @@ function creaCasella(tagElement, className, number){
     return element;
 }
 
-
 const container = document.querySelector('.container');
 const x = 'div';
 const y = 'casella';
@@ -25,6 +24,10 @@ for(let i = 1; i <= 100; i++){
     const box = creaCasella(x, y, i);
     container.append(box);
 }
+const btnPlay = document.getElementById('btn-play');
 
-
-
+btnPlay.addEventListener('click',
+    function () {
+        container.classList.add('show')
+    }
+);
