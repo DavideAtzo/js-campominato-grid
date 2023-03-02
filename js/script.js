@@ -8,6 +8,7 @@ function creaCasella(tagElement, className, number){
     element.addEventListener(
         'click',
         function(){
+            console.log(number);
             element.classList.add('cambio-colore');
         }
     )
