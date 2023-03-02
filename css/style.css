@@ -81,6 +81,23 @@ main{
     justify-content: center;
     align-items: center;
 }
+.casella-9{
+    width: calc(100% / 9);
+    height: calc(100% / 9);;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casella-7{
+    width: calc(100% / 7);
+    height: calc(100% / 7);;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .cambio-colore{
     background-color: var(--click-color);
