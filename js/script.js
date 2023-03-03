@@ -5,26 +5,9 @@ function creaCasella(tagElement, className, number){
     const element = document.createElement(tagElement);
     element.classList.add(className);
     element.innerText = number;
-    element.addEventListener(
-        'click',
-        function(){
-            element.classList.add('cambio-colore');
-        }
-    )
     return element;
 }
-
-
-const x = 'div';
-const y = 'casella';
-let cellNumber = 0;
-const livDifficolta = document.getElementById('difficoltà');
-
-creaCasella(x, y);
-
-const btnPlay = document.getElementById('btn-play');
-
-btnPlay.addEventListener('click', function(){
+function Tabellone(){
     const container = document.querySelector('.container');
     container.innerHTML = '';
     let selDifficolta = livDifficolta.value
@@ -38,6 +21,13 @@ btnPlay.addEventListener('click', function(){
             box.innerText = i;
             container.append(box);
             container.classList.add('show')
+            box.addEventListener(
+                'click',
+                function(){
+                    box.classList.add('cambio-colore');
+                }
+            )
+        
         }
     }else if(selDifficolta === 'normale'){
         cellNumber = 81;
@@ -47,6 +37,13 @@ btnPlay.addEventListener('click', function(){
             box.innerText = i;
             container.append(box);
             container.classList.add('show')
+            box.addEventListener(
+                'click',
+                function(){
+                    box.classList.add('cambio-colore');
+                }
+            )
+        
         }
     } else{
         cellNumber = 100;
@@ -56,8 +53,27 @@ btnPlay.addEventListener('click', function(){
             box.innerText = i;
             container.append(box);
             container.classList.add('show')
+            box.addEventListener(
+                'click',
+                function(){
+                    box.classList.add('cambio-colore');
+                }
+            )
+        
         }
     }
+    
+    
+}
 
-    container.classList.add('show');
-});
+
+const x = 'div';
+const y = 'casella';
+let cellNumber = 0;
+const livDifficolta = document.getElementById('difficoltà');
+
+creaCasella(x, y);
+
+const btnPlay = document.getElementById('btn-play');
+
+btnPlay.addEventListener('click', Tabellone)
