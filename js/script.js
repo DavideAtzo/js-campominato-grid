@@ -1,18 +1,18 @@
 'use strict';
-/* <div class="casella">1</div> */
-
+// funziona che crea la cella 
 function creaCasella(tagElement, className, number){
     const element = document.createElement(tagElement);
     element.classList.add(className);
     element.innerText = number;
     return element;
 }
+// funzione che crea il tabellone di gioco 
 function Tabellone(){
     const container = document.querySelector('.container');
     container.innerHTML = '';
     let selDifficolta = livDifficolta.value
     console.log(selDifficolta);
-
+// condizione che comprende la creazione del tabellone di gioco in base alla difficolta 
     if(selDifficolta === 'difficile'){
         cellNumber = 49;
         for (let i = 1; i <= cellNumber; i++) {
@@ -25,9 +25,7 @@ function Tabellone(){
                 'click',
                 function(){
                     box.classList.add('cambio-colore');
-                }
-            )
-        
+                }  )
         }
     }else if(selDifficolta === 'normale'){
         cellNumber = 81;
@@ -41,9 +39,7 @@ function Tabellone(){
                 'click',
                 function(){
                     box.classList.add('cambio-colore');
-                }
-            )
-        
+                })
         }
     } else{
         cellNumber = 100;
@@ -57,21 +53,16 @@ function Tabellone(){
                 'click',
                 function(){
                     box.classList.add('cambio-colore');
-                }
-            )
-        
-        }
+         } )
+         }
     }
-    
-    
 }
-
-
+// dichiarazione variabili 
 const x = 'div';
 const y = 'casella';
 let cellNumber = 0;
 const livDifficolta = document.getElementById('difficoltà');
-
+// richiamo funzione 
 creaCasella(x, y);
 
 const btnPlay = document.getElementById('btn-play');
